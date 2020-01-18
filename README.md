@@ -25,3 +25,19 @@ function expect(actual) {
   };
 }
 ```
+
+3rd commit
+
+Writing your own testing framework, since we are throwing error if will not run all of the test, as the execution is interrupted. So a testing framework is used, to run all of the tests and check the failed ones.
+
+```javascript
+function test(title, callback) {
+  try {
+    callback();
+    console.log("test passed");
+  } catch (err) {
+    console.error("test failed");
+    console.error(err);
+  }
+}
+```
