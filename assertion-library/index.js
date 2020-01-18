@@ -13,23 +13,3 @@ test("should subtrach numbers", () => {
   const expected = 4;
   expect(result).toEqual(expected);
 });
-
-async function test(title, callback) {
-  try {
-    await callback();
-    console.log(`&#10004; test passed`);
-  } catch (err) {
-    console.error(`x test failed`);
-    console.error(err);
-  }
-}
-
-function expect(actual) {
-  return {
-    toEqual(expected) {
-      if (actual !== expected) {
-        throw new Error(`${actual} not equal to ${expected}`);
-      }
-    }
-  };
-}

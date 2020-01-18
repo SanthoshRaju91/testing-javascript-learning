@@ -57,3 +57,11 @@ function test(title, callback) {
     }
 }
 ```
+
+5th commit
+
+Making test & expect functions global, so would not have to require them. And making it available just like all other testing frameworks.
+
+To do this, moving the test & expect functions into a separate file and require them while running the testing like below
+
+`node --require ./setup-test/global.js assertion-library/index.js`
