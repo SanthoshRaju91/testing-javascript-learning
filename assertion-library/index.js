@@ -14,9 +14,9 @@ test("should subtrach numbers", () => {
   expect(result).toEqual(expected);
 });
 
-function test(title, callback) {
+async function test(title, callback) {
   try {
-    callback();
+    await callback();
     console.log(`&#10004; test passed`);
   } catch (err) {
     console.error(`x test failed`);

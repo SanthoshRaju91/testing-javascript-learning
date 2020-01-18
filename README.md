@@ -41,3 +41,19 @@ function test(title, callback) {
   }
 }
 ```
+
+4th commit
+
+Adding async support, for testing async code in our testing framework.
+
+```javascript
+function test(title, callback) {
+    try {
+        await callback();
+        console.log("test passed")
+    } catch (err) {
+        console.error("test failed")
+        console.error(err)
+    }
+}
+```
